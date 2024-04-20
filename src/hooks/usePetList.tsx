@@ -10,8 +10,7 @@ interface IUsePetList {
 export function usePetList(params: GetPetsRequest): IUsePetList {
     const { data, isLoading } = useQuery({
         queryKey: ['get-pets', params],
-        queryFn: () => getPets(params),  
-        
+        queryFn: () => getPets(params),          
     })
 
     return {data, isLoading}
